@@ -4,16 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arch Haven</title>
-</head>
-<body>
-    <header>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
+    <!-- DaisyUI + TailWind CDN -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+    rel="stylesheet"
+    type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                colors: {
+                    clifford: '#da373d',
+                    'primary-colour': '#ABEF5F',
+                },
+                fontFamily: {
+                    'manrope': ['Manrope', 'sans-serif'],
+                }
+            }
+          }
+        }
+    </script>
+    <!-- Fontawesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-manrope">
+    <header class="md:container mx-auto px-0 my-5">
+        <!-- Navbar -->
+         <nav class="border-2 border-red-300">
+            <div class="navbar justify-between">
+                <!-- Navbar Start -->
+                <div class="justify-start border-2 border-orange-400">
+                  <a class="btn btn-ghost font-extrabold text-xl md:text-2xl xl:text-4xl"><span><i class="fa-solid fa-arrow-right -rotate-45 bg-primary-colour rounded-full p-1"></i></span> UIRinterio</a>
+                </div>
+                <!-- Navbar Center -->
+                <div class="border-2 border-green-400 hidden lg:flex lg:justify-between lg:items-center lg:gap-1">
+                  <ul class="menu menu-horizontal px-1">
+                    <li class="font-extrabold text-sm md:text-base hover:bg-[#acef5f9a] rounded-lg"><a>Home</a></li>
+                    <li class="font-normal text-sm md:text-base text-[#737373] hover:bg-[#acef5f9a] rounded-lg"><a>Services</a></li>
+                    <li class="font-normal text-sm md:text-base text-[#737373] hover:bg-[#acef5f9a] rounded-lg"><a>Portfolio</a></li>
+                    <li class="font-normal text-sm md:text-base text-[#737373] hover:bg-[#acef5f9a] rounded-lg"><a>Blogs</a></li>
+                    <li class="font-normal text-sm md:text-base text-[#737373] hover:bg-[#acef5f9a] rounded-lg"><a>Contact Us</a></li>
+                  </ul>
+                </div>
+                <!-- Navbar End -->
+                <div class="justify-end flex">
+                    <!-- Search Button -->
+                    <button class="hidden md:flex btn bg-white border-none hover:bg-[#acef5fcb] btn-circle ml-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <!-- Card Button -->
+                    <div class="hidden md:flex dropdown dropdown-left">
+                        <div tabindex="0" role="button" class="btn bg-white border-none hover:bg-[#acef5fcb] btn-circle">
+                          <div class="indicator">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-5 w-5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor">
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span class="indicator-item"></span>
+                          </div>
+                        </div>
+                        <div
+                          tabindex="0"
+                          class="card card-compact dropdown-content bg-base-100 z-[1] mt-14 w-52 shadow">
+                          <div class="card-body">
+                            <span class="text-lg font-bold">0 Items</span>
+                            <span class="text-info">Subtotal: $0</span>
+                            <div class="card-actions">
+                              <button class="btn bg-primary-colour hover:bg-primary-colour btn-block">View cart</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Book Consult Button -->
+                    <a class="btn hidden md:flex bg-primary-colour hover:bg-primary-colour font-extrabold text-lg lg:text-xl rounded-full">Book Consult <span><i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white p-2 rounded-full"></i></span></a>
+                    <!-- Dropdown Menu for Small Device -->
+                    <div class="dropdown dropdown-left">
+                        <!-- Search Button -->
+                        <div tabindex="0" role="button" class="btn bg-white border-none lg:hidden">
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class="h-5 w-5" 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor">
+                                <path stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                stroke-width="2" 
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <!-- Menu Button -->
+                        <ul tabindex="0" class="menu menu-md dropdown-content bg-base-100 rounded-box z-[1] mt-14 w-48 md:w-36 p-2 shadow">
+                            <div class="flex justify-around items-center">
+                                <li class="md:hidden">
+                                    <button class="btn bg-white border-none rounded-full hover:bg-[#acef5fcb] btn-circle">
+                                        <svg 
+                                            xmlns="http://www.w3.org/2000/svg" 
+                                            class="h-5 w-5" 
+                                            fill="none" 
+                                            viewBox="0 0 24 24" 
+                                            stroke="currentColor">
+                                            <path 
+                                                stroke-linecap="round" 
+                                                stroke-linejoin="round" 
+                                                stroke-width="2" 
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" 
+                                            />
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="md:hidden">
+                                    <div class="dropdown dropdown-left">
+                                        <label tabindex="0" role="button" class="btn bg-white border-none hover:bg-[#acef5fcb] btn-circle">
+                                            <div class="indicator">
+                                                <svg 
+                                                    xmlns="http://www.w3.org/2000/svg" 
+                                                    class="h-5 w-5" 
+                                                    fill="none" 
+                                                    viewBox="0 0 24 24" 
+                                                    stroke="currentColor">
+                                                    <path 
+                                                        stroke-linecap="round" 
+                                                        stroke-linejoin="round" 
+                                                        stroke-width="2" 
+                                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" 
+                                                    />
+                                                </svg>
+                                                <span class="indicator-item"></span>
+                                            </div>
+                                        </label>
+                                        <!-- <div tabindex="0" class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-40 shadow">
+                                            <div class="card-body">
+                                                <span class="text-lg font-bold">0 Items</span>
+                                                <span class="text-info">Subtotal: $0</span>
+                                                <div class="card-actions">
+                                                    <button class="btn bg-primary-colour btn-block">View cart</button>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </li>
+                            </div>
+                            <!-- Main Navigation Links -->
+                            <li class="font-extrabold text-base md:text-lg hover:bg-[#acef5f9a] rounded-lg"><a>Home</a></li>
+                            <li class="font-normal text-sm md:text-base text-[#737373] hover:bg-[#acef5f9a] rounded-lg"><a>Services</a></li>
+                            <li class="font-normal text-sm md:text-base text-[#737373] hover:bg-[#acef5f9a] rounded-lg"><a>Portfolio</a></li>
+                            <li class="font-normal text-sm md:text-base text-[#737373] hover:bg-[#acef5f9a] rounded-lg"><a>Blogs</a></li>
+                            <li class="font-normal text-sm md:text-base text-[#737373] hover:bg-[#acef5f9a] rounded-lg"><a>Contact Us</a></li>
+                            <li><a class="md:hidden btn bg-primary-colour hover:bg-primary-colour font-extrabold text-sm md:text-xl rounded-full w-full">Book Consult <span><i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white p-2 rounded-full"></i></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+         </nav>
     </header>
     <main>
 
     </main>
     <footer>
-        
+
     </footer>
 </body>
 </html>
