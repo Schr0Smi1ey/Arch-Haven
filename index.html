@@ -197,9 +197,9 @@
             </div>
         </section>
     </header>
-    <main class="md:container mx-auto">
+    <main>
         <!-- Design Section -->
-        <section class="border-2 border-yellow-700 relative px-0 my-10 lg:my-18 bg-gray-100">
+        <section class="border-2 border-yellow-700 md:container mx-auto relative px-0 my-10 lg:my-18 bg-gray-100">
             <!-- Vector Image -->
             <img src="images/Vector.png" alt="" class="hidden lg:flex lg:absolute lg:top-0">
             <!-- Design container -->
@@ -241,7 +241,7 @@
         </section>
 
         <!-- Process Section -->
-        <section class="border-2 border-yellow-700 px-0 my-10 lg:my-18 bg-gray-100">
+        <section class="border-2 border-yellow-700 md:container mx-auto px-0 my-10 lg:my-18 bg-gray-100">
             <!-- Process Content -->
             <div class="mb-8">
                 <div class="border-2 border-green-600 text-center flex flex-col items-center justify-between">
@@ -284,7 +284,7 @@
         </section>
 
         <!-- Latest Portfolio Section -->
-        <section class="border-2 border-yellow-700 px-0 my-10 lg:my-18 sm:bg--[#E9E9E9] lg:bg-white">
+        <section class="border-2 border-yellow-700 md:container mx-auto px-0 my-10 lg:my-18 sm:bg--[#E9E9E9] lg:bg-white">
             <!-- Portfolio Content -->
             <div class="mb-8">
                 <div class="border-2 border-green-600 text-center flex flex-col items-center justify-between">
@@ -340,17 +340,32 @@
              </div>
         </section>
 
+        
         <!-- Next Project Section -->
         <section class="bg-[url('images/bg.jpg')]">
-            <!-- Next Project Content Part -->
-            <div class="mb-8">
-                <div class="border-2 border-green-600 text-center flex flex-col items-center justify-between">
-                    <button class="bg-[#ABEF5F33] font-extrabold text-base px-3 py-1 mb-3 rounded-full"><i class="fa-solid fa-arrow-right mr-1"></i>Let’s Connect</button>
-                    <h1 class="font-bold text-3xl lg:text-4xl text-[#212121] mb-5">Let’s Discuss Next Project</h1>
-                    <p class="border-2 border-green-600 md:w-5/6 lg:w-3/6 font-normal text-base text-center lg:p-0">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+            <div class="border-2 border-yellow-700 md:container mx-auto px-5 lg:px-16 my-10 lg:my-18 py-10 lg:py-20 bg-gray-100">
+                <!-- Next Project Content Part -->
+                <div class="mb-8">
+                    <div class="border-2 border-green-600 text-center flex flex-col items-center justify-between">
+                        <button class="bg-[#ABEF5F33] font-extrabold text-base px-3 py-1 mb-3 rounded-full"><i class="fa-solid fa-arrow-right mr-1"></i>Let’s Connect</button>
+                        <h1 class="font-bold text-3xl lg:text-4xl text-[#212121] mb-5">Let’s Discuss Next Project</h1>
+                        <p class="border-2 border-green-600 md:w-5/6 lg:w-3/6 font-normal text-base text-center lg:p-0">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                    </div>
+                </div>
+                <!-- Next Project Form Part -->
+                <div class="flex flex-col border-2 border-green-600 px-5 lg:px-10 gap-5">
+                    <div class="border-2 border-red-600 grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <input type="text" placeholder="First Name*" class="input w-full font-medium text-lg rounded-full" />
+                        <input type="text" placeholder="Last Name*" class="input w-full font-medium text-lg rounded-full" />
+                        <input type="text" placeholder="Phone Number*" class="input w-full font-medium text-lg rounded-full" />
+                        <input type="text" placeholder="Email Number*" class="input w-full font-medium text-lg rounded-full" />
+                    </div>
+                    <div class="border-2 border-orange-600">
+                        <textarea class="textarea w-full font-medium text-lg rounded-xl h-[240px] p-5 resize-none" placeholder="Write your message here"></textarea>
+                    </div>
+                    <button class="border-2 border-red-600 font-extrabold text-lg md:text-xl text-[#212121] px-2 py-1 rounded-full bg-[#ABEF5F]">Send Mail <span><i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white rounded-full p-1"></i></span></button>
                 </div>
             </div>
-            <!-- Next Project Form Part -->
         </section>
     </main>
     <footer>
